@@ -1,17 +1,16 @@
 ﻿using PCAxis.Paxiom;
-using PX.SearchAbstractions;
-using System;
+using PX.Search.Abstractions;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using System.Text;
 using Lucene.Net.Store;
 using Lucene.Net.Index;
 using Lucene.Net.Analysis.Standard;
 using PCAxis.Menu;
 using Lucene.Net.Documents;
-using PCAxis.Web.Core.Enums;
 using PCAxis.Paxiom.Extensions;
-
+using Lucene.Net;
 
 namespace Px.Search.Lucene.Legacy
 {
@@ -132,7 +131,7 @@ namespace Px.Search.Lucene.Legacy
                 return null;
             }
 
-            IndexWriter writer = new IndexWriter(fsDir, new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30), createIndex, IndexWriter.MaxFieldLength.LIMITED);
+            IndexWriter writer = new IndexWriter(fsDir, new StandardAnalyzer(global::Lucene.Net.Util.Version.LUCENE_30), createIndex, IndexWriter.MaxFieldLength.LIMITED);
             return writer;
         }
     }

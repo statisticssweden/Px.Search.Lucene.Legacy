@@ -1,4 +1,4 @@
-﻿using PX.SearchAbstractions;
+﻿using PX.Search.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,9 +52,9 @@ namespace Px.Search.Lucene.Legacy
             List<SearchResultItem> searchResult = new List<SearchResultItem>();
             string[] fields = GetSearchFields(filter);
 
-            QueryParser qp = new MultiFieldQueryParser(Lucene.Net.Util.Version.LUCENE_30,
+            QueryParser qp = new MultiFieldQueryParser(global::Lucene.Net.Util.Version.LUCENE_30,
                                                        fields,
-                                                       new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30));
+                                                       new StandardAnalyzer(global::Lucene.Net.Util.Version.LUCENE_30));
 
             qp.DefaultOperator = _defaultOperator;
 
@@ -86,11 +86,11 @@ namespace Px.Search.Lucene.Legacy
         {
             if (defaultOperator == DefaultOperator.OR)
             {
-                _defaultOperator = Lucene.Net.QueryParsers.QueryParser.Operator.OR;
+                _defaultOperator = QueryParser.Operator.OR;
             }
             else
             {
-                _defaultOperator = Lucene.Net.QueryParsers.QueryParser.Operator.AND;
+                _defaultOperator = QueryParser.Operator.AND;
             }
         }
 

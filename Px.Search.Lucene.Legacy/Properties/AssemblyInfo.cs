@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Px.Search.Lucene.Legacy")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A .net framework implementation of a search provider built on lucene")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SCB")]
 [assembly: AssemblyProduct("Px.Search.Lucene.Legacy")]
