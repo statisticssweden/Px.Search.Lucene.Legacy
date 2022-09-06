@@ -24,9 +24,6 @@ jobs:
 
     - name: Build the application
       run: msbuild /p:Configuration=Release
-      
-    - name: Create nuget package
-      run: nuget pack Px.Search.Lucene.Legacy/Px.Search.Lucene.Legacy.csproj
 
     - name: Deploy to Nuget
       run: |
