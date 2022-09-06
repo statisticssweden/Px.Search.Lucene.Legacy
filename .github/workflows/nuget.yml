@@ -25,6 +25,11 @@ jobs:
     - name: Build the application
       run: msbuild /p:Configuration=Release
 
+    - name: Pack nuget
+      run: |
+        cd ./Px.Search.Lucene.Legacy
+        nuget pack
+      
     - name: Deploy to Nuget
       run: |
            $package = Get-ChildItem -Recurse -Filter *.nupkg
