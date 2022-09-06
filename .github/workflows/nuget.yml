@@ -28,7 +28,7 @@ jobs:
     - name: Pack nuget
       run: |
         cd ./Px.Search.Lucene.Legacy
-        nuget pack
+        nuget pack -Prop Configuration=Release
       
     - name: Deploy to Nuget
       run: |
