@@ -1,15 +1,12 @@
-﻿using PX.Search.Abstractions;
+﻿using Lucene.Net.Analysis.Standard;
+using Lucene.Net.Documents;
+using Lucene.Net.QueryParsers;
+using Lucene.Net.Search;
+using Lucene.Net.Store;
+using PCAxis.Paxiom.Extensions;
+using Px.Search.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lucene.Net.Store;
-using Lucene.Net.Search;
-using Lucene.Net.QueryParsers;
-using Lucene.Net.Documents;
-using Lucene.Net.Analysis.Standard;
-using PCAxis.Paxiom.Extensions;
 
 namespace Px.Search.Lucene.Legacy
 {

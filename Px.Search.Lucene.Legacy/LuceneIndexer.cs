@@ -1,16 +1,12 @@
-﻿using PCAxis.Paxiom;
-using PX.Search.Abstractions;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using System.Text;
-using Lucene.Net.Store;
-using Lucene.Net.Index;
-using Lucene.Net.Analysis.Standard;
-using PCAxis.Menu;
+﻿using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Documents;
+using Lucene.Net.Index;
+using Lucene.Net.Store;
+using PCAxis.Paxiom;
 using PCAxis.Paxiom.Extensions;
-using Lucene.Net;
+using Px.Search.Abstractions;
+using System;
+using System.Linq;
 
 namespace Px.Search.Lucene.Legacy
 {
