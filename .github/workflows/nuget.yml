@@ -26,9 +26,7 @@ jobs:
       run: msbuild /p:Configuration=Release
 
     - name: Pack nuget
-      run: |
-        cd ./Px.Search.Lucene.Legacy
-        nuget pack -Prop Configuration=Release
+      run: msbuild -t:pack
       
     - name: Deploy to Nuget
       run: |
